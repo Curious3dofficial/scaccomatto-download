@@ -1,4 +1,4 @@
-# Scaccomatto
+# Scaccomatto Free
 
 Chess, with personality. A free chess game for Windows and Linux by Alekhine Studios Private Limited.
 
@@ -6,14 +6,15 @@ Chess, with personality. A free chess game for Windows and Linux by Alekhine Stu
 
 ![Scaccomatto](img/boardroom.jpg)
 
-- Eight variants: Classic, Chess960, King of the Hill, Three-check, Atomic, Fog of War and Duck Chess
-- Bots with their own stories and styles
-- Analysis and Game Review
-- Play a friend on the same Wi-Fi with a join code
+- Seven variants to play with a friend: Classic, Chess960, King of the Hill, Three-check, Atomic, Fog of War and Duck Chess
+- Bots with their own stories and styles, up to 2200
+- Spectate: watch two bots play each other
 
-**Windows:** run the `.exe`. If Windows says "Windows protected your PC", click *More info*, then *Run anyway*.
+Online play, Analysis, Game Review, Puzzles, Lessons and Spell Chess are in the full version of Scaccomatto, coming soon on Steam and itch.io.
 
-**Linux:** `sudo apt install ./scaccomatto_<version>_amd64.deb`
+**Windows:** run `Scaccomatto-Free-Setup-<version>.exe`. If Windows says "Windows protected your PC", click *More info*, then *Run anyway*.
+
+**Linux:** `sudo apt install ./scaccomatto-free_<version>_amd64.deb`
 
 Found a problem? Email alekhinestudios@gmail.com
 

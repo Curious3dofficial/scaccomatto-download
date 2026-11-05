@@ -124,3 +124,6 @@ footer p { margin: 4px 0; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .btn { min-width: 0; width: 100%; }
 }
+
+/* the "full version" card stands out a little */
+.features article.full h2 { color: var(--gold-deep); }
