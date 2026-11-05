@@ -2,7 +2,7 @@
 
 Chess, with personality. A free chess game for Windows and Linux by Alekhine Studios Private Limited.
 
-**[Download the latest version](../../releases/latest)** · [Website](https://curious3dofficial.github.io/scaccomatto/)
+**[Download the latest version](../../releases/latest)** · [Website](https://curious3dofficial.github.io/scaccomatto-download/)
 
 ![Scaccomatto](img/boardroom.jpg)
 
