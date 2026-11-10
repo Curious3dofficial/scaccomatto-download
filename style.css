@@ -127,3 +127,9 @@ footer p { margin: 4px 0; }
 
 /* the "full version" card stands out a little */
 .features article.full h2 { color: var(--gold-deep); }
+/* an odd number of features: the "full version" card takes the whole last row */
+.features article.full { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; align-items: center; }
+.features article.full img { grid-row: span 2; margin-bottom: 0; }
+.features article.full h2 { align-self: end; }
+.features article.full p { align-self: start; }
+@media (max-width: 820px) { .features article.full { display: block; } .features article.full img { margin-bottom: 16px; } }

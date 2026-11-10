@@ -1,6 +1,6 @@
 # Scaccomatto Free
 
-Chess, with personality. A free chess game for Windows and Linux by Alekhine Studios Private Limited.
+Chess, with personality. A free chess game for Windows and Linux by Alekhine Studios.
 
 **[Download the latest version](../../releases/latest)** · [Website](https://curious3dofficial.github.io/scaccomatto-download/)
 
@@ -18,4 +18,4 @@ Online play, Analysis, Game Review, Puzzles, Lessons and Spell Chess are in the 
 
 Found a problem? Email alekhinestudios@gmail.com
 
-© 2026 Alekhine Studios Private Limited
+© 2026 Alekhine Studios
