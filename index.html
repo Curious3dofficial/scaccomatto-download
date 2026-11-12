@@ -28,7 +28,7 @@
       <span><strong>Download for Linux</strong><small id="dl-linux-note">.deb for Ubuntu, Mint, Debian</small></span>
     </a>
   </div>
-  <p class="fineprint"><span id="version">Scaccomatto Free 1.1.0</span> · Java is built in, so there's nothing else to install. · <a href="#install">Install help</a></p>
+  <p class="fineprint"><span id="version">Scaccomatto 1.1.0</span> · Java is built in, so there's nothing else to install. · <a href="#install">Install help</a></p>
 </header>
 
 <main>
@@ -130,12 +130,14 @@
 const REPO = "Curious3dofficial/scaccomatto-download";
 
 (function () {
-  const releasesPage = "https://github.com/" + REPO + "/releases/latest";
+  // the buttons give the FULL game: its own release (the free one stays as the repo's "latest")
+  const FULL_TAG = "full-1.1.0";
+  const releasesPage = "https://github.com/" + REPO + "/releases/tag/" + FULL_TAG;
   document.querySelectorAll("[data-fallback]").forEach(a => a.href = releasesPage);
   document.getElementById("all-releases").href = "https://github.com/" + REPO + "/releases";
 
   // Point the buttons straight at the newest installers when GitHub tells us their names.
-  fetch("https://api.github.com/repos/" + REPO + "/releases/latest")
+  fetch("https://api.github.com/repos/" + REPO + "/releases/tags/" + FULL_TAG)
     .then(r => r.ok ? r.json() : null)
     .then(rel => {
       if (!rel || !rel.assets) return;
@@ -143,7 +145,7 @@ const REPO = "Curious3dofficial/scaccomatto-download";
       const deb = rel.assets.find(a => /\.deb$/i.test(a.name));
       if (exe) document.getElementById("dl-windows").href = exe.browser_download_url;
       if (deb) document.getElementById("dl-linux").href = deb.browser_download_url;
-      if (rel.tag_name) document.getElementById("version").textContent = "Scaccomatto Free " + rel.tag_name.replace(/^v/, "");
+      if (rel.tag_name) document.getElementById("version").textContent = "Scaccomatto " + rel.tag_name.replace(/^(full-|v)/, "");
       const mb = a => a ? " · " + Math.round(a.size / 1048576) + " MB" : "";
       document.getElementById("dl-windows-note").textContent = "Windows 10 and 11" + mb(exe);
       document.getElementById("dl-linux-note").textContent = ".deb for Ubuntu, Mint, Debian" + mb(deb);
