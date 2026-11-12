@@ -13,22 +13,52 @@
 </head>
 <body>
 
-<nav class="topbar">
-  <a class="brand" href="index.html"><img src="img/icon.png" alt="" width="36" height="36">Scaccomatto Free</a>
-  <span class="topbar-links">
-    <a href="#install">Help installing</a>
-    <a href="#questions">Questions</a>
-  </span>
+<nav class="topbar" id="topbar">
+  <a class="brand" href="index.html"><img src="img/icon.png" alt="" width="36" height="36"><span class="brand-text">Scaccomatto Free</span></a>
+  <ul class="topbar-links">
+    <li><a href="#variants">Features</a></li>
+    <li><a href="#bots">Bots</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#questions">FAQ</a></li>
+    <li><a href="credits.html">Credits</a></li>
+    <li><a href="https://github.com/Curious3dofficial/scaccomatto-download/releases">All versions &#8599;</a></li>
+  </ul>
+  <div class="topbar-actions">
+    <div class="topbar-search-slot">
+      <div class="topbar-search" id="topbarSearch">
+        <button type="button" class="topbar-search-btn" id="topbarSearchBtn" aria-label="Search this page">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <input type="text" class="topbar-search-input" id="topbarSearchInput" placeholder="Search...">
+        <span class="topbar-search-caret" id="topbarSearchCaret"></span>
+      </div>
+    </div>
+    <a class="topbar-icon-btn" href="mailto:alekhinestudios@gmail.com" aria-label="Email Alekhine Studios">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </a>
+    <div class="topbar-hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
 </nav>
 
 <header class="hero">
   <div class="lid">
     <img class="lid-wordmark" src="img/wordmark.png" alt="Scaccomatto" width="1100" height="300">
+    <span class="wordmark-thud" aria-hidden="true"></span>
     <span class="seal" aria-hidden="true">Free!</span>
     <figure class="lid-art">
-      <img src="img/spectategame.jpg" alt="Margot and Dex, two of the bots, in the middle of a game" width="1280" height="720">
+      <div class="lid-art-viewport" id="lidArtViewport">
+        <div class="lid-art-track" id="lidArtTrack">
+          <img src="img/spectate.jpg" alt="Picking two bots to watch in Spectate" data-clone="true" aria-hidden="true" tabindex="-1">
+          <img src="img/spectategame.jpg" alt="Margot and Dex, two of the bots, halfway through a Semi-Slav Defense">
+          <img src="img/analysis.jpg" alt="The Analysis board showing the engine's best lines">
+          <img src="img/spectate.jpg" alt="Picking two bots to watch in Spectate">
+          <img src="img/spectategame.jpg" alt="Margot and Dex, two of the bots, halfway through a Semi-Slav Defense" data-clone="true" aria-hidden="true" tabindex="-1">
+        </div>
+      </div>
     </figure>
-    <p class="lid-caption">Margot and Dex halfway through a Nimzo-Indian. Pull up a chair.</p>
+    <div class="lid-caption-wrap" id="lidCaptionWrap">
+      <p class="lid-caption" id="lidCaption">Margot and Dex, deep in a Semi-Slav. Dex just almost blundered.</p>
+    </div>
   </div>
 
   <div class="hero-text">
@@ -54,7 +84,6 @@
   <section class="variants" aria-labelledby="variants-title">
     <div class="section-head">
       <h2 class="outlined" id="variants-title">Seven ways to play</h2>
-      <p>Sit a friend down at your computer and take turns. Classic is always there for you, but do give the others a go. Atomic gets loud very quickly, and Duck Chess will probably end a friendship.</p>
     </div>
     <ul class="variant-grid">
       <li><img src="img/variants/classic.jpg" alt="" width="73" height="73"><h3>Classic</h3><p>The game you already know.</p></li>
@@ -71,7 +100,6 @@
   <section class="bots" aria-labelledby="bots-title">
     <div class="section-head">
       <h2 class="outlined" id="bots-title">Meet the bots</h2>
-      <p>Gary is a good place to start. He'll take anything you leave lying around, which is fair, because you'll do the same to him. Margot is where things stop being friendly.</p>
     </div>
     <ul class="bot-row">
       <li class="bot"><img src="img/bots/gary.jpg" alt="Gary" width="86" height="86"><h3>Gary</h3><span class="elo">Elo 300</span></li>
@@ -87,12 +115,12 @@
 
   <section class="duo">
     <article>
-      <img src="img/spectate.jpg" alt="Picking Gary and Theo to watch in Spectate" width="1280" height="720" loading="lazy">
+      <img class="zoomable" src="img/spectate.jpg" alt="Picking Gary and Theo to watch in Spectate" width="1280" height="720" loading="lazy" tabindex="0" role="button" aria-label="Open larger view of: Picking Gary and Theo to watch in Spectate">
       <h2>Or just watch</h2>
       <p>Pick any two bots and let them play each other. It's a nice way to see how a stronger player handles a position, and it's very satisfying watching Gary lose to everyone.</p>
     </article>
     <article>
-      <img src="img/analysis.jpg" alt="The Analysis board showing the engine's best lines" width="1280" height="720" loading="lazy">
+      <img class="zoomable" src="img/analysis.jpg" alt="The Analysis board showing the engine's best lines" width="1280" height="720" loading="lazy" tabindex="0" role="button" aria-label="Open larger view of: The Analysis board showing the engine's best lines">
       <h2>A proper analysis board</h2>
       <p>Set up a position or paste in a game, and Argus, the engine we wrote from scratch for Scaccomatto, shows you the best moves and who's ahead. You can explore openings, build your own repertoire and drill it until it sticks.</p>
     </article>
@@ -169,6 +197,13 @@
   <p class="copy-line">© 2026 Alekhine Studios</p>
 </footer>
 
+<!-- Fullscreen preview for the "Or just watch" / "A proper analysis board"
+     screenshots. One shared overlay, filled in with whichever image was
+     clicked. -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="" id="lightbox-img">
+</div>
+
 <script>
 // The GitHub repository the downloads come from. Change this one line if the repo moves.
 const REPO = "Curious3dofficial/scaccomatto-download";
@@ -200,6 +235,296 @@ const REPO = "Curious3dofficial/scaccomatto-download";
     })
     .catch(() => {});
 
+  // Rotating sequence of screenshots inside the lid-art box. Same
+  // "rotation motion" as a slide-track carousel: a clone of the last
+  // slide sits before the first, and a clone of the first sits after
+  // the last, so it can always just keep sliding forward and never
+  // needs to visibly snap backwards to loop. Movement is driven by
+  // requestAnimationFrame with a cubic ease-out, not a CSS transition,
+  // so a frame can be dropped without the animation jumping.
+  (function () {
+    const track = document.getElementById("lidArtTrack");
+    if (!track) return;
+    const realSlides = 3; // spectategame.jpg, analysis.jpg, spectate.jpg
+    const totalSlides = realSlides + 2; // plus one clone on each end
+    const slideWidthPct = 100 / totalSlides;
+
+    function lidArtEase(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    let currentPhysical = 1; // start on the first real slide
+    let currentPct = -currentPhysical * slideWidthPct;
+    let animFrame = null;
+
+    function physicalToReal(physical) {
+      if (physical === 0) return realSlides - 1;
+      if (physical === totalSlides - 1) return 0;
+      return physical - 1;
+    }
+
+    // One caption per real slide, in the same order as the slides above.
+    const captionTexts = [
+      "Margot and Dex, deep in a Semi-Slav. Dex just almost blundered.",
+      "Argus walks through the best lines, move by move.",
+      "Picking who to watch next in Spectate."
+    ];
+    const captionEl = document.getElementById("lidCaption");
+
+    function updateCaption(realIndex) {
+      const text = captionTexts[realIndex];
+      if (!captionEl || captionEl.textContent === text) return;
+
+      // A ghost copy of the old text drifts up, blurs and fades out in place.
+      const ghost = captionEl.cloneNode(true);
+      ghost.removeAttribute("id");
+      ghost.setAttribute("aria-hidden", "true");
+      captionEl.parentNode.appendChild(ghost);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => ghost.classList.add("is-leaving"));
+      });
+      ghost.addEventListener("transitionend", () => ghost.remove(), { once: true });
+      setTimeout(() => ghost.remove(), 700);
+
+      // The new text swaps in instantly below its resting spot, then
+      // transitions up into place - no blur on the way in.
+      captionEl.textContent = text;
+      captionEl.style.transition = "none";
+      captionEl.classList.add("is-entering");
+      captionEl.getBoundingClientRect(); // force the start state to apply
+      captionEl.style.transition = "";
+      // Two frames, not one: the browser needs to actually paint the
+      // "just below, invisible" start state before the class comes off,
+      // otherwise it can skip straight to the end state with no transition.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => captionEl.classList.remove("is-entering"));
+      });
+    }
+
+    function setTrackPct(pct) {
+      currentPct = pct;
+      track.style.transform = `translateX(${pct}%)`;
+    }
+    setTrackPct(currentPct);
+
+    function animateTrackTo(targetPct, duration, onComplete) {
+      if (animFrame) cancelAnimationFrame(animFrame);
+      const startPct = currentPct;
+      const delta = targetPct - startPct;
+      const startTime = performance.now();
+      function step(now) {
+        const t = Math.min(1, (now - startTime) / duration);
+        setTrackPct(startPct + delta * lidArtEase(t));
+        if (t < 1) {
+          animFrame = requestAnimationFrame(step);
+        } else {
+          animFrame = null;
+          if (onComplete) onComplete();
+        }
+      }
+      animFrame = requestAnimationFrame(step);
+    }
+
+    function advance() {
+      const nextPhysical = currentPhysical + 1;
+      updateCaption(physicalToReal(nextPhysical));
+      animateTrackTo(-nextPhysical * slideWidthPct, 2100, () => {
+        if (nextPhysical === totalSlides - 1) {
+          // Landed on the trailing clone; it looks identical to the
+          // first real slide, so snap straight back to that - no
+          // animation, nothing for the eye to catch.
+          currentPhysical = 1;
+          track.style.transition = "none";
+          setTrackPct(-currentPhysical * slideWidthPct);
+          track.getBoundingClientRect(); // force the snap to apply before re-enabling motion
+          track.style.transition = "";
+        } else {
+          currentPhysical = nextPhysical;
+        }
+      });
+    }
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return; // leave it sitting on the first slide, no autoplay
+
+    let autoplay = setInterval(advance, 6000);
+
+    // No sense spending frames animating a box that's scrolled off
+    // screen - pause while it's out of view, resume when it's back.
+    const art = document.getElementById("lidArtViewport");
+    if (art && "IntersectionObserver" in window) {
+      new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!autoplay) autoplay = setInterval(advance, 6000);
+          } else if (autoplay) {
+            clearInterval(autoplay);
+            autoplay = null;
+          }
+        });
+      }, { threshold: 0.1 }).observe(art);
+    }
+  })();
+
+  // Top bar: transparent over the hero, gaining a glassy backing as you
+  // scroll down through it (tracked exactly to scroll position, not
+  // animated), then behaving like a taskbar once you're past the hero -
+  // hides on scroll down, reveals on scroll up, and always reveals if
+  // the mouse comes up near the very top edge of the window.
+  const topbar = document.getElementById("topbar");
+  const hero = document.querySelector(".hero");
+  let lastScrollY = window.scrollY;
+
+  // Search icon toggles an input that expands leftward. Only the icon
+  // click opens or closes it - no auto-close on blur or outside click,
+  // so once it's open it stays open until clicked again.
+  const topbarSearch = document.getElementById("topbarSearch");
+  const topbarSearchBtn = document.getElementById("topbarSearchBtn");
+  const topbarSearchInput = document.getElementById("topbarSearchInput");
+  const topbarSearchCaret = document.getElementById("topbarSearchCaret");
+
+  function syncTopbarCaret() {
+    if (!topbarSearchInput || !topbarSearchCaret) return;
+    const show = document.activeElement === topbarSearchInput && topbarSearchInput.value.length === 0;
+    topbarSearchCaret.classList.toggle("is-blinking", show);
+    topbarSearchCaret.style.opacity = show ? "" : "0";
+  }
+  function openTopbarSearch() {
+    if (!topbarSearch || !topbarSearchInput) return;
+    topbarSearch.classList.add("is-open");
+    topbarSearchInput.disabled = false;
+    topbarSearchInput.focus();
+  }
+  function closeTopbarSearch() {
+    if (!topbarSearch || !topbarSearchInput) return;
+    topbarSearch.classList.remove("is-open");
+    topbarSearchInput.blur();
+    topbarSearchInput.value = "";
+    topbarSearchInput.disabled = true;
+    syncTopbarCaret();
+  }
+  if (topbarSearch && topbarSearchBtn && topbarSearchInput) {
+    topbarSearchInput.disabled = true; // can't be focused or typed into until opened
+    topbarSearchBtn.addEventListener("click", () => {
+      if (topbarSearch.classList.contains("is-open")) closeTopbarSearch();
+      else openTopbarSearch();
+    });
+    topbarSearchInput.addEventListener("focus", syncTopbarCaret);
+    topbarSearchInput.addEventListener("blur", syncTopbarCaret);
+    topbarSearchInput.addEventListener("input", syncTopbarCaret);
+  }
+
+  function updateTopbar() {
+    const y = window.scrollY;
+    const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 0;
+    const glassProgress = heroBottom > 0 ? Math.min(1, Math.max(0, y / heroBottom)) : 1;
+    topbar.style.setProperty("--topbar-glass-opacity", glassProgress);
+
+    if (y > heroBottom) {
+      if (y > lastScrollY) {
+        topbar.classList.add("is-hidden");
+        // The search box lives inside the bar - once the bar itself is
+        // off-screen there's no reason for it to stay expanded.
+        closeTopbarSearch();
+      } else {
+        topbar.classList.remove("is-hidden");
+      }
+    } else {
+      topbar.classList.remove("is-hidden");
+    }
+    lastScrollY = y;
+  }
+  updateTopbar();
+  window.addEventListener("scroll", updateTopbar, { passive: true });
+
+  document.addEventListener("mousemove", e => {
+    if (e.clientY < 32) topbar.classList.remove("is-hidden");
+  });
+
+  // Tabbing into one of its links should reveal it too.
+  topbar.addEventListener("focusin", () => topbar.classList.remove("is-hidden"));
+
+  // Lightbox for the "Or just watch" / "A proper analysis board"
+  // screenshots: click one and it grows from right where it was sitting
+  // into a big centered view (with the page dimming behind it); click
+  // outside it, press Esc, or click the image itself to shrink it back
+  // to that same spot. The grow/shrink motion is a classic FLIP: measure
+  // where the image starts and where it ends up, jump it instantly to
+  // look like the start, then transition to the real end state (or the
+  // reverse, on the way out).
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  let activeThumb = null;
+
+  function transformFromTo(fromRect, toRect) {
+    const scaleX = fromRect.width / toRect.width;
+    const scaleY = fromRect.height / toRect.height;
+    const dx = (fromRect.left + fromRect.width / 2) - (toRect.left + toRect.width / 2);
+    const dy = (fromRect.top + fromRect.height / 2) - (toRect.top + toRect.height / 2);
+    return `translate(${dx}px, ${dy}px) scale(${scaleX}, ${scaleY})`;
+  }
+
+  function openLightbox(thumb) {
+    activeThumb = thumb;
+    lightboxImg.src = thumb.src;
+    lightboxImg.alt = thumb.alt;
+    lightboxImg.classList.remove("is-animating");
+    lightboxImg.style.transform = "none";
+    lightbox.classList.add("is-open");
+    document.body.classList.add("lightbox-locked");
+
+    const thumbRect = thumb.getBoundingClientRect();
+    // Let the browser lay the image out at its final (big) size first,
+    // then work out the transform that makes it LOOK like it's still
+    // sitting at the thumbnail's spot and size.
+    requestAnimationFrame(() => {
+      const finalRect = lightboxImg.getBoundingClientRect();
+      lightboxImg.style.transform = transformFromTo(thumbRect, finalRect);
+      requestAnimationFrame(() => {
+        lightboxImg.classList.add("is-animating");
+        lightboxImg.style.transform = "none";
+      });
+    });
+  }
+
+  function closeLightbox() {
+    if (!lightbox.classList.contains("is-open")) return;
+    const thumb = activeThumb;
+    if (thumb) {
+      const thumbRect = thumb.getBoundingClientRect();
+      const finalRect = lightboxImg.getBoundingClientRect();
+      lightboxImg.classList.add("is-animating");
+      lightboxImg.style.transform = transformFromTo(thumbRect, finalRect);
+    } else {
+      lightboxImg.classList.remove("is-animating");
+    }
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-locked");
+    activeThumb = null;
+  }
+
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", () => openLightbox(img));
+    img.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(img);
+      }
+    });
+  });
+
+  // Click anywhere that isn't the enlarged image itself - that's "outside
+  // the tile" - closes it. The image is the only thing inside the
+  // overlay that isn't the dimmed backdrop, so this is just "did the
+  // click land on the picture or not".
+  lightbox.addEventListener("click", e => {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+  lightboxImg.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+  });
+
   // "Copy" button next to the Linux command.
   document.querySelectorAll("[data-copy]").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -210,6 +535,78 @@ const REPO = "Curious3dofficial/scaccomatto-download";
       }).catch(() => {});
     });
   });
+
+  // Smooth open/close animation for the FAQ dropdowns, instead of the
+  // instant snap <details> does by default. Falls back to the normal
+  // instant toggle if the browser doesn't support element.animate, and
+  // skips the animation entirely if the visitor asked for less motion.
+  //
+  // The content paragraph is forced visible at all times (see the
+  // ".faq details > p" CSS rule) and the real open/closed look comes
+  // entirely from clipping `details` to a JS-controlled height. That
+  // way the state we animate from/to never depends on the browser's
+  // own timing for the native `open` attribute, which is what caused
+  // fast clicks to make two panels' content overlap: a new animation
+  // used to start from a stale height instead of wherever the box
+  // actually was on screen at that instant.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && typeof Element.prototype.animate === "function") {
+    document.querySelectorAll(".faq details").forEach(details => {
+      const summary = details.querySelector("summary");
+      let anim = null;
+      let isOpen = false;
+
+      // The collapsed height needs the details box's own top+bottom
+      // padding added on top of the summary's height, not just the
+      // summary alone - otherwise the clipped box is shorter than the
+      // padding box and the question text gets cut off against the
+      // top border instead of sitting centered in it.
+      const getClosedHeight = () => {
+        const cs = getComputedStyle(details);
+        return summary.offsetHeight + parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+      };
+
+      // Start clipped to just the question row.
+      details.style.overflow = "hidden";
+      details.style.height = getClosedHeight() + "px";
+
+      // Listen on the whole box, not just the question row, so the
+      // entire bordered rectangle is one clickable hitbox - including
+      // its padding - not just the text/icon strip inside it.
+      details.addEventListener("click", e => {
+        // Let a real link inside the answer (e.g. the privacy page
+        // link) work normally instead of toggling the box closed.
+        if (e.target.closest("a")) return;
+        e.preventDefault();
+
+        // Read the box's actual current height before touching anything
+        // else, so a new animation always continues from where this one
+        // visually is right now, even if it's mid-animation.
+        const startHeight = details.getBoundingClientRect().height + "px";
+        if (anim) anim.cancel();
+
+        isOpen = !isOpen;
+        details.open = isOpen;
+
+        const closedHeight = getClosedHeight() + "px";
+        const endHeight = isOpen ? details.scrollHeight + "px" : closedHeight;
+
+        details.style.height = startHeight;
+        anim = details.animate(
+          { height: [startHeight, endHeight] },
+          {
+            duration: isOpen ? 260 : 220,
+            easing: isOpen ? "cubic-bezier(.2,.8,.3,1)" : "cubic-bezier(.4,0,.6,1)"
+          }
+        );
+        anim.onfinish = () => {
+          anim = null;
+          details.style.height = isOpen ? "" : closedHeight;
+        };
+        anim.oncancel = () => { anim = null; };
+      });
+    });
+  }
 })();
 </script>
 </body>
