@@ -131,7 +131,10 @@ const REPO = "Curious3dofficial/scaccomatto-free-site";
 
 (function () {
   const releasesPage = "https://github.com/" + REPO + "/releases/latest";
-  document.querySelectorAll("[data-fallback]").forEach(a => a.href = releasesPage);
+  // straight to the files even if GitHub's API can't be reached (it limits how often one
+  // network may ask); the newest-release lookup below still updates them when it works
+  document.getElementById("dl-windows").href = "https://github.com/" + REPO + "/releases/latest/download/Scaccomatto-Free-Setup-1.1.0.exe";
+  document.getElementById("dl-linux").href = "https://github.com/" + REPO + "/releases/latest/download/scaccomatto-free_1.1.0_amd64.deb";
   document.getElementById("all-releases").href = "https://github.com/" + REPO + "/releases";
 
   // Point the buttons straight at the newest installers when GitHub tells us their names.
